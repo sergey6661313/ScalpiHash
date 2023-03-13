@@ -1075,7 +1075,7 @@ pub fn main      () !void {
         if (readed_size == 0) break;
         
         var readed = file_data[0..readed_size];
-        for(readed) |donor_byte, pos| { // xor loop
+        for(readed, 0..) |donor_byte, pos| { // xor loop
             const byte = donor_byte +% mask[pos];
             try writer.writeByte(byte);
         }
