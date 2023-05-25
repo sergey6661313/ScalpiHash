@@ -17,8 +17,9 @@
          inc all output bytes from mask (in first i wish use xor, but did not come true)
      because the number of "active" bits in the mask does not change (4) this allows using xor to change the state of half of the bits in any sequence.
      And since the state of the mask changes depending on each bit of the input sequence, which allows us to talk about a good avalanche effect.
-###  compile with zig v11:
+###  compile with zig v11 (dev):
          $ zig build
          
-##   new: ScalpiEncrypt for encrypting any file.
-     (for encrypt folder i recomend just zip it with tar lol)
+#    Scalpi Encrypt and Decrypt systems
+##   just use ScalpiHash as infinty "One-time pad" for encrypting any file.
+     (for encrypt multiple files as one file i recomend just zip it with tar lol)
